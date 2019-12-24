@@ -1,0 +1,52 @@
+.promotional-top {
+  display: block;
+  height: 80px;
+  width: 100vw;
+  background-color: #e11d12;
+}
+.promotional-top .jd_container {
+  height: 100%;
+  position: relative;
+}
+.jd_container {
+  margin: 0 auto;
+  width: 1190px;
+  background-image: url(../img/promotional-top/top-ad-bd.webp);
+}
+.jd_container .icon-close_button {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  color: #fff;
+  background-color: #2d2d2d;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  opacity: 0.3;
+  font-size: 14px;
+  font-weight: 700;
+}
+#shortcut {
+  background-color: #e3e4e5;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+#shortcut .w {
+  height: 30px;
+  line-height: 30px;
+  width: 1190px;
+  margin: 0 auto;
+}
+#shortcut .w .span {
+  color: #666;
+}
+#shortcut .w a:hover {
+  color: red;
+}
+#shortcut .fl {
+  float: left;
+}
+#shortcut .fr {
+  float: right;
+}

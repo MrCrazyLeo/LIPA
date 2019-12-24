@@ -1,0 +1,30 @@
+{
+  "id": "1579845",
+  "name": "仿JD首页",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3512378",
+      "name": "location",
+      "font_class": "ionc--location",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7228970",
+      "name": "close_button",
+      "font_class": "close_button",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "9699521",
+      "name": "关闭-square-fill",
+      "font_class": "guanbi-square-fill",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    }
+  ]
+}
