@@ -6,37 +6,74 @@
     <link rel="icon" type="image/x-icon" href="img/JD.png" >
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1579845_9frntilppdk.css">
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1579845_q9h4xsbleze.css">
     <script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
     <div id="J_promotional-top">
-        <a href="#" target="_blank" aria-label="顶部推广" class="promotional-top" style="background-color: rgb(225, 69, 18);">
+        <a href="#" target="_blank" aria-label="顶部推广" class="promotional-top">
             <div class="jd_container">
                 <i class="iconfont icon-close_button" tabindex="0" aria-label="关闭顶部推广"></i>
                 
             </div>
         </a>
     </div>
-    <!-- 自己写啦骚年，抄是没有灵魂的~ -->
+
     <div id="shortcut">
+        <!-- shortcut左部分，选择区域 -->
         <div class="w" role="navigation" aria-label="顶部导航"  tabindex="0">
             <ul class="fl">
-                <li class="short_btn dropdown" id="ttbar-mycity">
+                <li class="shortcut_btn dropdown" id="ttbar-mycity">
                     <!-- 地理图标 -->
                     <a class="dt cw-icon ui-areamini-text-wrap" id="areamini" role="button">
-                        <i class="iconfont icon-ionc--location" style="color:red"></i>
+                        <i class="iconfont icon-location" style="color:red"></i>
                         <span class="ui-areamini-text">广东</span>
                     </a>
                     <!-- 地理位置下拉菜单 -->
-                    <div class="dd dropdown-layer"
+                    <div class="dd dropdown-layer" role="menu">
+                        <!-- 地区选择 -->
+                        <div class="ui-areamini-content-wrap" style="left: auto;">
+                            <div class="ui-areamini-content-list"></div>
+                        </div>
+                        <div class="areamini_inter">
+                            <div class="areamini_inner_spilt"></div>
+                            <p>地区专享版本</p>
+                            <a>中国港澳</a>
+                        </div>
+                        <div class="areamini_inter">
+                            <div class="areamini_inner_spilt"></div>
+                            <p>Available Sites</p>
+                            <ul class="areamini_inter_list">
+                                <li class="areamini_inter_item">
+                                        <a class="areamini_inter_lk">
+                                            <i class="areamini_inter_ico areamini_inter_ico_russia iconfont"></i>
+                                            <span class="areamini_inter_name">Global Site</span>
+                                        </a>
+                                </li>
+                                <li class="areamini_inter_item">
+                                        <a class="areamini_inter_lk">
+                                            <i class="areamini_inter_ico areamini_inter_ico_russia iconfont"></i>
+                                            <span class="areamini_inter_name">Сайт России</span>
+                                        </a>
+                                </li>
+                                <li class="areamini_inter_item">
+                                        <a>
+                                            <i class="iconfont"></i>
+                                            <span>Global Site</span>
+                                        </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
             </ul>
+            <!-- shortcut右部分， -->
             <ul class="fr"></ul>
         </div>
         
         
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
