@@ -63,19 +63,12 @@ JD首页素材获取（取自类似开源项目）、布局分析
 ### 12月25日
 
 - 京东首页的秒杀在定时结束之后会自动隐藏
-- 在下拉列表中间莫名有个空隙
-![](C:/Users/Lenox/AppData/Roaming/Typora/typora-user-images/1577255982930.png)
-
-![1577256041203](C:/Users/Lenox/AppData/Roaming/Typora/typora-user-images/1577256041203.png)
-
-盒子300px跟322px：这是box-sizing:border-box跟box-sizing:content-box带来的问题。改成box-sizing:content-box就正常了。
-
+- 盒子300px跟322px：这是box-sizing:border-box跟box-sizing:content-box带来的问题。改成box-sizing:content-box就正常了。
 
 
 ### 12月26日
 
 改bug，没弄这边
-
 
 
 ###　12月27日
@@ -103,4 +96,3 @@ BFC、清浮动、样式管理
 - 左栏向左浮动，右栏向右浮动，中间设margin: 0 auto
 - 左右两栏绝对定位，中间设margin: 0 auto
 - 左栏中间栏右栏左浮，左栏margin-left：-100%，中间栏宽100%,，右栏margin-left:-右栏宽度且布局上必须中间栏放第一个
-
