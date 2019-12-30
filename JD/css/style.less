@@ -1,57 +1,48 @@
 
 .promotional-top {
-    & {
-        display: block;
-        height: 80px;
-        width: 100vw;
-        background-color: rgb(141, 0, 7);
-    }
-
+    display: block;
+    height: 80px;
+    width: 100vw;
+    background-color: rgb(141, 0, 7);
     .jd_container {
         height: 100%;
         position: relative;
     }
 }
+
 .jd_container {
-    & {
-        margin: 0 auto;
-        width: 1190px;
-        background-image: url(../img/promotional-top/top-GG-bd-christmas.jpg);
-    }
+    margin: 0 auto;
+    width: 1190px;
+    background-image: url(../img/promotional-top/top-GG-bd-christmas.jpg);
     .icon-close_button {
-        & {
-            position: absolute;
-            top: 5px;
-            right: 0;
-            color: #fff;
-            background-color: #2d2d2d;
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            line-height: 20px;
-            opacity: .3;
-            font-size: 14px;
-            font-weight: 700;
-        }
+        position: absolute;
+        top: 5px;
+        right: 0;
+        color: #fff;
+        background-color: #2d2d2d;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        opacity: .3;
+        font-size: 14px;
+        font-weight: 700;
     }
 
 }
 
 #shortcut {
     // 整体
-    & {
-        background-color: #e3e4e5;
-        border-bottom: 1px solid #ddd;
-        cursor: pointer;
-    }
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
     // 主体
     .w {
-        & {
-            height: 30px;
-            line-height: 30px;
-            width: 1190px;
-            margin: 0 auto;
-        }
+        height: 30px;
+        line-height: 30px;
+        width: 1190px;
+        margin: 0 auto;
+
         .span {
             color: #666;
         }
@@ -61,7 +52,6 @@
     }
     // 左部分
     .fl {
-        float: left;
         .ui-areamini-content-wrap {
             position: relative;
             display: inline-block;
@@ -72,62 +62,64 @@
         display: none;
         position: absolute;
         background-color: #fff;
-        top: -16px;
+        top: -15px;
+        left: -5px;
         box-shadow: 1px 2px 1px rgba(0,0,0,0.1);
         border: 1px solid #ccc;
     }
-    #ttbar-mycity:hover .ui-areamini-content-list {
-        display: block;
-        width: 300px;
-        padding: 10px;
-        box-sizing: content-box;
-    }
-    #ttbar-mycity .item {
-        float: left;
-        width: 60px;
-        padding: 2px 0;
-        & a {
-            float: left;
-            padding: 0 8px; 
-            height: 24px;
-            line-height: 24px;
-            min-width: 24px;
-            
-        }
-    }
-    #ttbar-mycity .areamini_inter {
-        display: none;
-        position: absolute;
-        background-color: #fff;
-        top: 247px;
-        box-shadow: 1px 2px 1px rgba(0,0,0,0.1);
-        border: 1px solid #ccc;
-    }
-    #ttbar-mycity:hover .areamini_inter {
-        display: block;
-        width: 300px;
-        padding: 10px;
-        box-sizing: content-box;
-    }
-
-    #ttbar-mycity .item a:hover {
-        background-color: #f4f4f4;
-    }
-
     #ttbar-mycity {
+        height: 30px;
+        padding: 0 4px;
+        &:hover {
+            background-color: #fff;
+            box-shadow: 1px 2px 1px rgba(0,0,0,0.1);
+            padding-bottom: 2px;
+        }
+        &:hover .ui-areamini-content-list {
+            display: block;
+            width: 300px;
+            padding: 10px;
+            box-sizing: content-box;
+        }
+
+        .item {
+            float: left;
+            width: 60px;
+            padding: 2px 0; 
+            a {
+                float: left;
+                padding: 0 8px; 
+                height: 24px;
+                line-height: 24px;
+                min-width: 24px;
+            } 
+            a:hover {
+                background-color: #f4f4f4;
+            }
+        }
+
+        .areamini_inter {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            top: 247px;
+            left: -1px;
+            box-shadow: 1px 2px 1px rgba(0,0,0,0.1);
+            border: 1px solid #ccc;
+        }
+
+        &:hover .areamini_inter {
+            display: block;
+            width: 300px;
+            padding: 10px;
+            box-sizing: content-box;
+        }
+
         .iconfont {
             font-size: 14px;
             color: #f10215;
             margin-right: 4px;
         }
-    }
-    .cw-icon {
-        height: 28px;
-        line-height: 28px;
-    }
-    // 右部分
-    .fr {
-        float: right;
     }
 }
 
@@ -159,5 +151,4 @@
 #shortcut .dd {
     line-height: 24px;
 }
-
 

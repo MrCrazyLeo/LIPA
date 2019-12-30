@@ -1,0 +1,521 @@
+body {
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+    color: #666;
+}
+.w {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{
+	margin: 0;
+	padding: 0;
+}
+
+input, button {
+    border: 0;
+    /* 取消轮廓边框 */
+    outline: none; 
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+}
+
+.f10 {
+    color: #f10215 !important;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?7cwtdn');
+    src:  url('../fonts/icomoon.eot?7cwtdn#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?7cwtdn') format('truetype'),
+      url('../fonts/icomoon.woff?7cwtdn') format('woff'),
+      url('../fonts/icomoon.svg?7cwtdn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+header {
+    height: 80px;
+    background-color:rgb(84, 18, 13);
+}
+
+.shortcut {
+    background-color: rgb(227, 228, 229);
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    color: #999;
+}
+
+.shortcut a:hover {
+    color: #e33333;
+}
+
+.shortcut li {
+    float: left;
+}
+
+.shortcut i {
+    font-family: "icomoon";
+    font-style: normal;  /* 让倾斜的不倾斜 */
+	color: #ccc;
+}
+
+.areamini a:hover{
+    color: red;
+} 
+
+.shortcut .areamini i {
+    font-size: 14px;
+}
+
+
+.space {
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 10px 12px 0;
+}
+
+.mobileJD {
+    position: relative;
+}
+
+.mobileJD img {
+    position: absolute;
+    top: 28px;
+    left: -9px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    display: none
+}
+
+.middle {
+    height: 140px;
+    position: relative;
+}
+
+.logo, .search {
+    position: relative;
+}
+
+.logo_tit {
+    display: block;
+    background: url(../image/logo_sprite.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 190px;
+    height: 120px;
+    font-size: 0;
+    position: absolute;
+    top: 20px;
+}
+
+.logo_subtit {
+    display: none;
+}
+
+.logo_scene_img {
+    background-image: url(../image/logo.gif);
+    width: 134px;
+    height: 120px;
+    background-color: #fff;
+    opacity: 1;
+    margin: 0 auto;
+    clear: both;
+    background-size: auto 100%;
+}
+
+.search .form {
+    width: 546px;
+    height: 32px;
+    /* position: absolute; */
+    background-color: #fff;
+    position: absolute;
+    left: 260px;
+    top: 25px;
+    border: 2px solid #e2231a;
+}
+
+.search .form input {
+    background: transparent;
+    width: 425px;
+    height: 26px;
+    padding: 2px 44px 2px 17px;
+    border: 1px solid transparent;
+    line-height: 26px;
+    font-size: 12px;
+    float: left;
+}
+
+.search .form button {
+    width: 58px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #e1251b;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    transition: background .2s ease;
+    float: left;
+}
+
+.search .form button:hover {
+    background-color: #c81623;
+}
+
+.form button i {
+    font-family: 'icomoon';
+    font-style: normal;  /* 让倾斜的不倾斜 */
+    color: #fff;
+    font-size: 17px;
+}
+
+.shopping_cart {
+    position: relative;
+    z-index: 21;
+}
+
+.shopping_cart .cw-icon{
+    width: 130px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    border-color: #eee;
+    position: absolute;
+    top: 25px;
+    right: 230px;
+    border: 1px solid #eee;
+}
+
+.shopping_cart .cw-icon span {
+    position: absolute;
+    top: 1px;
+    left: 29px;
+    right: auto;
+    padding: 1px 3px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #e1251b;
+    border-radius: 7px;
+    min-width: 12px;
+    text-align: center;
+}
+
+.shopping_cart .cw-icon:hover {
+    border-color: #c81623;
+}
+
+.shopping_cart .cw-icon i {
+    font-family: 'icomoon';
+    font-style: normal;
+    color: #e1251b;
+    margin-right: 13px;
+    font-size: 15px;
+}
+
+.shopping_cart .cw-icon:hover i {
+    color: #c81623;
+    transition: color .2s ease;
+}
+
+
+.shopping_cart .cw-icon a {
+    color: #e1251b;
+    transition: color .2s ease;
+}
+
+.shopping_cart .cw-icon:hover a {
+    color: #c81623;
+}
+
+.hotwords {
+    position: absolute;
+    top: 65px;
+    left: 260px;
+    width: 550px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.hotwords a {
+    float: left;
+    margin-right: 10px;
+}
+
+.hotwords .style-red {
+    color: #e1251b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.navitems {
+    overflow: hidden;
+    position: absolute;
+    left: 203px;
+    bottom: 0;
+    width: 761.737px;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 20px;
+
+}
+.navitems li {
+    float: left;
+    margin: 0 11px;
+}
+
+.navitems li a {
+    font-size: 15px;
+    color: #555;
+}
+
+.navitems li .style-red{
+    font-weight: 700;
+    color: #e1251b;
+}
+
+.treasure {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 190px;
+    height: 120px;
+}
+
+footer {
+    /* margin-top: 25px; */
+    height: 565.600px;
+    background-color: #EAEAEA;
+    overflow: hidden;
+}
+
+.service {
+    padding: 30px 0;
+    border-bottom: 1px solid #dedede;
+    /* 清浮动 */
+    overflow: hidden;
+}
+
+.service ul li {
+    height: 42px;
+    width: 297px;
+    position: relative;
+    line-height: 42px;
+    float: left;
+}
+
+.service li h5 {
+    position: absolute;
+    top: 0;
+    left: 38px;
+    width: 36px;
+    height: 42px;
+    background: url(../image/footer_sprite.png) no-repeat;
+    background-position: 0 -192px;
+    text-indent: -999em;
+}
+
+.service li:nth-child(2) h5 {
+    background-position: -41px -192px;
+}
+
+.service li:nth-child(3) h5 {
+    background-position: -82px -192px;
+}
+
+.service li:nth-child(4) h5 {
+    background-position: -123px -192px;
+}
+
+.service li p {
+    margin-left: 82px;
+    font-weight: 700;
+    height: 42px;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444;
+}
+
+.help {
+    padding: 20px 0;
+}
+.help .w {
+    height: 160px;
+    /* 清浮动 */
+    overflow: hidden; 
+}
+
+.help li{
+    width: 198px;
+    line-height: 22px;
+}
+
+.help h5 {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.help li a {
+    color: #666;
+}
+
+.help li a:hover {
+    color: #c81623;
+}
+
+.help .help-cover {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    float: right;
+    width: 200px;
+    height: 150px;
+    /* background-image: url(../image/footer_sprite.png); */
+}
+
+.help .help-cover h5{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.help-cover-con {
+    padding: 0 10px;
+}
+
+.help .more{
+    text-align: right;
+}
+
+.help .more a {
+    color: #666;
+}
+
+.help .more a:hover{
+    color: #c81623;
+}
+
+.copyright .w {
+    border-top: 1px solid #e1e1e1;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.copyright .w p {
+    color: #666;
+}
+
+.copyright .w p a:hover {
+    color: #c81623;
+}
+
+.copyright .w p span {
+    margin: 0 10px;
+}
+.copyright p .zero{
+    font-size: 0;
+}
+.copyright a, .copyright span{
+    font-size: 12px;
+}
+
+.copyright div {
+	margin-top:20px;
+}
+.copyright_info {
+    margin: 0 !important;
+    padding: 10px 0;
+    line-height: 22px;
+}
+
+.copyright_info p {
+    color: #999 !important ;
+}
+
+.copyright .business-license {
+    margin-left: 16px;
+}
+
+.area a i {
+    background-repeat: no-repeat;
+    background-image: url(../image/footer_sprite.png);
+    background-position: -108px -155px;
+    width: 15px;
+    height: 12px;
+    margin-top: -1px;
+    display: inline-block;
+    vertical-align: -1px;
+    margin-right: 10px;
+    font-style: normal;
+}
+
+.russian {
+    background-position: -168px -155px !important;
+}
+
+.indonesia {
+    background-position: -148px -155px !important;
+}
+
+.spain {
+    background-position: -128px -155px !important;
+}
+
+.thailand {
+    background-position: -108px -172px !important;
+}
+
+.foot-icon {
+    margin: 25px 0;
+}
+
+.foot-icon a {
+    background-repeat: no-repeat;
+    background-image: url(../image/footer_sprite.png);
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 3px;
+    width: 103px;
+    height: 32px;
+    /* line-height: 1000px; */
+    background-position: -205px -111px;
+}
+
+.foot-icon a:nth-child(2) {
+    background-position:-205px -74px
+}
+
+.foot-icon a:nth-child(3) {
+    background-position:-205px -37px
+}
+
+.foot-icon a:nth-child(4) {
+    background-position:-205px 0
+}
+
+.foot-icon a:nth-child(5) {
+    background-position:0 -155px
+}
