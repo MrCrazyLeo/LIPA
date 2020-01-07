@@ -43,19 +43,66 @@ a {
 
 @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?7cwtdn');
-    src:  url('../fonts/icomoon.eot?7cwtdn#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?7cwtdn') format('truetype'),
-      url('../fonts/icomoon.woff?7cwtdn') format('woff'),
-      url('../fonts/icomoon.svg?7cwtdn#icomoon') format('svg');
+    src:  url('../fonts/icomoon.eot?rdfr58');
+    src:  url('../fonts/icomoon.eot?rdfr58#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?rdfr58') format('truetype'),
+      url('../fonts/icomoon.woff?rdfr58') format('woff'),
+      url('../fonts/icomoon.svg?rdfr58#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
-  }
+}
+
+i {
+    font-family: "icomoon";
+    font-style: normal;  /* 让倾斜的不倾斜 */
+    color: #ccc;
+}
+
 header {
     height: 80px;
-    background-color:rgb(84, 18, 13);
+    background-color: rgb(194, 38, 31);
 }
+
+header .w{
+    position: relative;
+}
+
+header .sub-bar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 190px;
+    height: 80px;
+}
+
+header .right-fixed-pic{
+    position: fixed;
+    right: -6px;
+    top: 0;
+    z-index: 999;
+}
+
+header a img:nth-child(4) {
+    position: absolute;
+    top: 18px;
+    right: 160px;
+}
+
+header a img:nth-child(5) {
+    position: absolute;
+    top: 18px;
+    right: 34px;
+}
+
+header a img:nth-child(6) {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 21px;
+    height: 21px;
+}
+
 
 .shortcut {
     background-color: rgb(227, 228, 229);
@@ -77,7 +124,7 @@ header {
 .shortcut i {
     font-family: "icomoon";
     font-style: normal;  /* 让倾斜的不倾斜 */
-	color: #ccc;
+	color: #999;
 }
 
 .areamini a:hover{
@@ -146,10 +193,52 @@ header {
     background-size: auto 100%;
 }
 
+.search-m {
+    position: relative;
+    height: 0px;
+    z-index: 1;
+}
+
+.search-fix {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #f10214;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.search-fix .search-m {
+    margin: auto;
+    width: 1190px;
+    height: 50px;
+}
+
+.search-fix .search-m .form,
+.search-fix .search-m .cw-icon {
+    top: -37px;
+}
+
+.search-m .search-m_logo {
+    display: none;
+}
+
+.search-m .search-m_logo_roll {
+    background-image: url(../image/logo_sprite.png);
+    background-position: 0 -116px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 125px;
+    height: 40px;
+    /* text-indent: -999px; */
+}
+
 .search .form {
     width: 546px;
     height: 32px;
-    /* position: absolute; */
     background-color: #fff;
     position: absolute;
     left: 260px;
@@ -438,8 +527,13 @@ footer {
 .copyright p .zero{
     font-size: 0;
 }
+
 .copyright a, .copyright span{
     font-size: 12px;
+}
+
+.copyright .zero a {
+    color: #666;
 }
 
 .copyright div {
@@ -518,4 +612,10 @@ footer {
 
 .foot-icon a:nth-child(5) {
     background-position:0 -155px
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }

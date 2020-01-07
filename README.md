@@ -95,3 +95,75 @@ BFC、清浮动、样式管理
 - 左栏向左浮动，右栏向右浮动，中间设margin: 0 auto
 - 左右两栏绝对定位，中间设margin: 0 auto
 - 左栏中间栏右栏左浮，左栏margin-left：-100%，中间栏宽100%,，右栏margin-left:-右栏宽度且布局上必须中间栏放第一个
+
+
+
+### 1月5日
+
+时间过得真快。惭愧，首页还是没完成。在边弄首页，边完善项目的定时器小组件，边学习vue。这周主要是修bug、年会排练。
+
+
+
+### 1月6日
+
+- **清浮动clearfix**：去除父元素样式没设置高度、子元素设置浮动导致父级没办法被内部撑开的问题。常用的清浮动方法有以下几种：
+  - br标签清浮动
+
+  - 父元素设置overflow: auto
+
+  - 父元素设置overflow: hidden
+
+  - after伪元素清浮动
+
+    ```css
+    .clearfix:after {
+        content:"\200B"; 
+        display:block; 
+        height:0; 
+        clear:both;
+    }
+    .clearfix { 
+        *zoom:1; 
+    }
+    ```
+
+    (1) **display:block** 使生成的元素以块级元素显示,占满剩余空间;
+
+    (2) **height:0** 避免生成内容破坏原有布局的高度。
+
+    (3) **content:"\200B"** Unicode字符里有一个“零宽度空格”，也就是U+200B，这个字符本身是不可见的
+
+    (4) **zoom：1** 触发IE hasLayout。
+
+  - 父元素设置display:table
+
+  - 父元素浮动
+
+- 将分割线写在伪元素::after里边，不失为一种好方法。
+
+
+
+### 1月7日
+
+- 轮播图原理
+
+  - 设置一个可视区域screen，设置ul总长度（img * (N+1)张），在可视区域之外不可见，写animate脚本控制ul显示哪个li
+
+  - 
+
+- [\<button\>和\<input type='button'\>的区别](https://www.cnblogs.com/purediy/archive/2012/06/10/2544184.html)
+
+- 增加/删除class
+
+  - **html5增加了classList**
+
+    classList 属性返回元素的类名，作为 DOMTokenList 对象。
+
+    该属性用于在元素中添加，移除及切换 CSS 类。
+
+    classList 属性是只读的，但你可以使用 add() 和 remove() 方法修改它。
+
+    **增加**：document.getElementById("myDIV").classList.add("mystyle", "anotherClass", "thirdClass");
+
+    **去除**：document.getElementById("myDIV").classList.remove("mystyle");
+
