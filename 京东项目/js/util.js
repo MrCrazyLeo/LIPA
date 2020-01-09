@@ -20,3 +20,8 @@ function getPage(e) {
     pageY
   }
 }
+
+var closeTopBar = $('#close-top-bar')
+closeTopBar.click(function () {
+  $('header').hide()
+})

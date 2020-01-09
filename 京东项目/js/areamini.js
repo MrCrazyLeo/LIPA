@@ -7,7 +7,6 @@ $(document).ready(function(){
   // 遍历city_name数组生成DOM元素
   function setCity(){
       for (item of city_name){
-          console.log('城市：', item)
           let index = city_name.indexOf(item) + 1
           console.log('城市序号为：',index)
           let newDiv = document.createElement("div"); 
