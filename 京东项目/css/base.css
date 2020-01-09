@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: #f4f4f4;
     font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
     color: #666;
 }
@@ -129,12 +129,66 @@ header a img:nth-child(6) {
 
 .areamini a:hover{
     color: red;
+    cursor: pointer;
 } 
 
 .shortcut .areamini i {
     font-size: 14px;
 }
 
+.areamini {
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    width: 42px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.areamini .dropdown-layer{
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 300px;
+    height: 0px;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 2;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.areamini:hover .dropdown-layer {
+    display: block;
+    height: 220px;
+}
+
+.areamini:hover {
+    padding: 0 7px 2px 7px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin-bottom: 1px;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.areamini .item {
+    float: left;
+    width: 60px;
+    padding: 2px 0;
+}
+
+.areamini .item a {
+    float: left;
+    padding: 0 8px;
+}
+
+.areamini .selected {
+    background-color: #f10215;
+    color: #fff;
+}
 
 .space {
     width: 1px;
@@ -159,6 +213,7 @@ header a img:nth-child(6) {
 .middle {
     height: 140px;
     position: relative;
+    background-color: #fff;
 }
 
 .logo, .search {
@@ -214,26 +269,27 @@ header a img:nth-child(6) {
     margin: auto;
     width: 1190px;
     height: 50px;
+    transition: ease-in-out .4s all;
 }
 
 .search-fix .search-m .form,
 .search-fix .search-m .cw-icon {
-    top: -37px;
+    top: -32px;
 }
 
 .search-m .search-m_logo {
-    display: none;
+    overflow: hidden;
+    display: block;
+    width: 125px;
+    height: 0;
+    transition: ease-in-out .5s height;
 }
 
 .search-m .search-m_logo_roll {
+    height: 40px;
     background-image: url(../image/logo_sprite.png);
     background-position: 0 -116px;
     background-repeat: no-repeat;
-    overflow: hidden;
-    display: inline-block;
-    width: 125px;
-    height: 40px;
-    /* text-indent: -999px; */
 }
 
 .search .form {
@@ -397,7 +453,7 @@ header a img:nth-child(6) {
 footer {
     /* margin-top: 25px; */
     height: 565.600px;
-    background-color: #EAEAEA;
+    background-color: #f4f4f4;
     overflow: hidden;
 }
 
@@ -536,9 +592,6 @@ footer {
     color: #666;
 }
 
-.copyright div {
-	margin-top:20px;
-}
 .copyright_info {
     margin: 0 !important;
     padding: 10px 0;

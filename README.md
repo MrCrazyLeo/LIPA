@@ -147,9 +147,7 @@ BFC、清浮动、样式管理
 
 - 轮播图原理
 
-  - 设置一个可视区域screen，设置ul总长度（img * (N+1)张），在可视区域之外不可见，写animate脚本控制ul显示哪个li
-
-  - 
+  - 设置一个可视区域screen，设置ul总长度（img * (N+1)张），在可视区域之外不可见，写animate脚本滑动一定距离来控制显示哪个li
 
 - [\<button\>和\<input type='button'\>的区别](https://www.cnblogs.com/purediy/archive/2012/06/10/2544184.html)
 
@@ -166,4 +164,33 @@ BFC、清浮动、样式管理
     **增加**：document.getElementById("myDIV").classList.add("mystyle", "anotherClass", "thirdClass");
 
     **去除**：document.getElementById("myDIV").classList.remove("mystyle");
+
+- jQuery增删class
+
+  ``` js
+  // 增添样式
+  $('p').addClass('newClass')
+  
+  // 移除p元素中值为"high"的class
+  $("p").removeClass("high"); 
+  // 以空格的方式删除多个class名
+  $("p").removeClass("high another"); 
+  // 删除所有class
+  $("p").removeClass()
+  ```
+
+  
+
+### 1月8日
+
+- 完成轮播图和一键回到顶部动画
+
+
+
+### 1月9日
+
+- 修改完搜索框弹出的问题
+- 合并之前完成的地理位置下拉列表，首页基本完成。
+
+
 
