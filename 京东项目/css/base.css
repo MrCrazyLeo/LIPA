@@ -138,6 +138,9 @@ header a img:nth-child(6) {
 
 .areamini {
     position: relative;
+}
+
+.areamini .areamini-text-wrap{
     height: 28px;
     line-height: 28px;
     width: 42px;
@@ -163,9 +166,10 @@ header a img:nth-child(6) {
 .areamini:hover .dropdown-layer {
     display: block;
     height: 220px;
+    border-top: none;
 }
 
-.areamini:hover {
+.areamini:hover .areamini-text-wrap {
     padding: 0 7px 2px 7px;
     border: 1px solid #ccc;
     border-bottom: none;
