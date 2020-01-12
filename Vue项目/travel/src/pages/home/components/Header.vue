@@ -8,7 +8,7 @@
     输入城市/景点/游玩主题
   </div>
   <div class="header-right">
-    北京
+    {{this.city}}
     <span class="iconfont iconxiajiantou"></span>
   </div>
 </div>
@@ -16,7 +16,10 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
@@ -28,7 +31,8 @@ export default {
   background-color $bgColor
   color #fff
   .header-left
-    width 0.64rem
+    width 0.4rem
+    padding-left .1rem
     float left
     .back-icon
       text-align center
