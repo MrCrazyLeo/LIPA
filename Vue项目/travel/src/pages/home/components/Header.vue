@@ -7,10 +7,12 @@
     <span class="iconfont iconsousuo"></span>
     输入城市/景点/游玩主题
   </div>
-  <div class="header-right">
-    {{this.city}}
-    <span class="iconfont iconxiajiantou"></span>
-  </div>
+  <router-link to="/city">
+    <div class="header-right">
+      {{this.city}}
+      <span class="iconfont iconxiajiantou"></span>
+    </div>
+  </router-link>
 </div>
 </template>
 
@@ -27,11 +29,11 @@ export default {
 @import '~styles/varibles.styl'
 .header
   display flex
-  line-height .86rem
+  line-height $headerHeight
   background-color $bgColor
   color #fff
   .header-left
-    width 0.4rem
+    width 0.54rem
     padding-left .1rem
     float left
     .back-icon
@@ -51,4 +53,5 @@ export default {
     width 1.24rem
     float right
     text-align center
+    color #fff
 </style>
