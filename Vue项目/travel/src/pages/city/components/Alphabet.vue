@@ -1,7 +1,16 @@
 <template>
 <ul class="list">
-  <li class="item" v-for="(item, key) of cities" :key="key">
-    {{key}}
+  <li
+    class="item"
+    v-for="item of letters"
+    :key="item"
+    :ref="item"
+    @touchstart='handleTouchStart'
+    @touchmove='handleTouchMove'
+    @touchend='handleTouchEnd'
+    @click='handleLetterClick'
+  >
+    {{item}}
   </li>
 </ul>
 </template>
@@ -11,6 +20,55 @@ export default {
   name: 'CityAlphabet',
   props: {
     cities: Object
+  },
+  data () {
+    return {
+      touchStatus: false,
+      startY: 0,
+      timer: null
+    }
+  },
+  updated () {
+    this.startY = this.$refs['A'][0].offsetTop
+  },
+  computed: {
+    letters () {
+      // 提取城市对象的字母,计算出总共有多少种字母
+      const letters = []
+      for (let i in this.cities) {
+        letters.push(i)
+      }
+      return letters
+    }
+  },
+  methods: {
+    handleLetterClick (e) {
+      this.$emit('change', e.target.innerText)
+    },
+    handleTouchStart () {
+      this.touchStatus = true
+    },
+    handleTouchMove (e) {
+      if (this.touchStatus) {
+        if (this.timer) {
+          clearTimeout(this.timer)
+        }
+        this.timer = setTimeout(() => {
+          const touchY = e.touches[0].clientY - 79
+          const index = Math.floor((touchY - this.startY) / 20)
+          for (let i = 0; i < this.letters.length; i++) {
+            this.$refs[this.letters[i]][0].classList.remove('selected')
+          }
+          if (index >= 0 && index < this.letters.length) {
+            this.$emit('change', this.letters[index])
+            this.$refs[this.letters[index]][0].classList.add('selected')
+          }
+        }, 8)
+      }
+    },
+    handleTouchEnd () {
+      this.touchStatus = false
+    }
   }
 }
 </script>
@@ -30,4 +88,7 @@ export default {
     line-height .4rem
     text-align center
     color $bgColor
+  .selected
+    background #ddd
+    border-radius 50%
 </style>

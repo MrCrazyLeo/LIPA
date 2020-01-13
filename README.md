@@ -159,9 +159,9 @@ BFC、清浮动、样式管理
 
     classList 属性是只读的，但你可以使用 add() 和 remove() 方法修改它。
 
-    **增加**：document.getElementById("myDIV").classList.add("mystyle", "anotherClass", "thirdClass");
+    **增加**：document.getElementById("myDIV").classList.add('mystyle', 'anotherClass', 'thirdClass');
 
-    **去除**：document.getElementById("myDIV").classList.remove("mystyle");
+    **去除**：document.getElementById("myDIV").classList.remove('mystyle');
 
 - jQuery增删class
 
