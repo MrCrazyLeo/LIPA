@@ -56,12 +56,8 @@ export default {
         this.timer = setTimeout(() => {
           const touchY = e.touches[0].clientY - 79
           const index = Math.floor((touchY - this.startY) / 20)
-          for (let i = 0; i < this.letters.length; i++) {
-            this.$refs[this.letters[i]][0].classList.remove('selected')
-          }
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
-            this.$refs[this.letters[index]][0].classList.add('selected')
           }
         }, 8)
       }
@@ -88,7 +84,4 @@ export default {
     line-height .4rem
     text-align center
     color $bgColor
-  .selected
-    background #ddd
-    border-radius 50%
 </style>
