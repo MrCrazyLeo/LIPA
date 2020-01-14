@@ -9,7 +9,7 @@
   </div>
   <router-link to="/city">
     <div class="header-right">
-      {{this.city}}
+      {{this.doubleCity}}
       <span class="iconfont iconxiajiantou"></span>
     </div>
   </router-link>
@@ -17,10 +17,13 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    // 让this.$store.state.city直接改为this.city使用
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
   }
 }
 </script>
@@ -50,7 +53,8 @@ export default {
     color #ccc
     padding-left .15rem
   .header-right
-    width 1.24rem
+    min-width 1.04rem
+    padding 0 .1rem
     float right
     text-align center
     color #fff
