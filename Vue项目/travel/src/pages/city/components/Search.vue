@@ -64,6 +64,8 @@ export default {
     handleCityClick (city) {
       this.changeCity(city)
       this.$router.push('/')
+      // 选择城市之后要记得将keyword清空，否则点进来还是停留在搜索页面
+      this.keyword = ''
     },
     ...mapMutations(['changeCity'])
   }
