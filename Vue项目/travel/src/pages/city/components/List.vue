@@ -66,6 +66,7 @@ export default {
       // this.$store.commit('changeCity', city)
       // 使用mapMutation之后直接把city传进去就可以了
       this.changeCity(city)
+      // 编程式的导航
       this.$router.push('/')
     },
     ...mapMutations(['changeCity'])
