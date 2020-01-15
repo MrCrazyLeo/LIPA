@@ -36,11 +36,12 @@ export default {
       }
     }
   },
-  activated () {
+  // 如果mounted和unmounted改成activated和deactivated会有问题
+  mounted () {
     // 全局，需要解绑！
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  unmounted () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
