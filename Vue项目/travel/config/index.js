@@ -12,9 +12,16 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://localhost:8080',
+        // // mock模拟
+        // target: 'http://localhost:8080',
+        // pathRewrite: {
+        //   '^/api': '/static/mock'
+        // }
+        // 真机调试
+        // .json文件放在本地xampp/htdoc/travelAPI文件夹下
+        target: 'http://localhost:80',
         pathRewrite: {
-          '^/api': '/static/mock'
+          '^/api': 'http://localhost:80/travelAPI/'
         }
       }
     },
