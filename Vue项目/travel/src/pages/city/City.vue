@@ -30,10 +30,10 @@ export default {
   },
   methods: {
     getCityInfo () {
-      axiox.get('api/city.json').then(this.handleGetCityInfoSucc)
+      axiox.get('/api/city.json').then(this.handleGetCityInfoSucc)
     },
-    handleGetCityInfoSucc (res) {
-      res = res.data
+    handleGetCityInfoSucc (ret) {
+      const res = ret.data
       if (res.ret && res.data) {
         const data = res.data
         this.cities = data.cities

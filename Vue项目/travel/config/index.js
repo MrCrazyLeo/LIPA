@@ -19,7 +19,7 @@ module.exports = {
         // }
         // 真机调试
         // .json文件放在本地xampp/htdoc/api文件夹下
-        target: 'http://localhost:80'
+        target: 'http://localhost'
       }
     },
 

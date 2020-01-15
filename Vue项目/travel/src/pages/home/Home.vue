@@ -42,8 +42,8 @@ export default {
       axios.get('/api/index.json?city=' + this.city)
         .then(this.getHomeInfoSucc)
     },
-    getHomeInfoSucc (res) {
-      res = res.data
+    getHomeInfoSucc (ret) {
+      const res = ret.data
       if (res.ret && res.data) {
         const data = res.data
         this.swiperList = data.swiperList
