@@ -18,11 +18,8 @@ module.exports = {
         //   '^/api': '/static/mock'
         // }
         // 真机调试
-        // .json文件放在本地xampp/htdoc/travelAPI文件夹下
-        target: 'http://localhost:80',
-        pathRewrite: {
-          '^/api': 'http://localhost:80/travelAPI/'
-        }
+        // .json文件放在本地xampp/htdoc/api文件夹下
+        target: 'http://localhost:80'
       }
     },
 
@@ -64,7 +61,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/travel',
 
     /**
      * Source Maps

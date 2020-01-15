@@ -33,7 +33,7 @@ export default {
   methods: {
     getDetailInfo () {
       // axios.get('api/detail.json?id=' + this.$route.params.id).then()
-      axios.get('api/detail.json', {
+      axios.get('/api/detail.json', {
         params: {
           id: this.$route.params.id
         }
