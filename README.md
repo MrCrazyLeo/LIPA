@@ -219,7 +219,7 @@ BFC、清浮动、样式管理
 
 完成首页
 
-![去哪儿网APP首页](media/去哪儿网APP首页.gif)
+<img src="media/去哪儿网APP首页.gif" alt="去哪儿网APP首页" style="zoom: 67%;" />
 
 
 
@@ -237,7 +237,7 @@ BFC、清浮动、样式管理
 - 搜索功能实现
 - 使用Vuex实现数据共享 —— 解决了非兄弟组件间的数据通信问题
 
-![去哪儿网APP城市选择页面](media/去哪儿网APP城市选择页面.gif)
+<img src="media/去哪儿网APP城市选择页面.gif" alt="去哪儿网APP城市选择页面" style="zoom:67%;" />
 
 ### 1月14日
 
@@ -253,7 +253,7 @@ BFC、清浮动、样式管理
 - 使用AJAX获取动态数据
 - 在项目中加入基础动画
 
-![去哪儿网APP详情页面](media/去哪儿网APP详情页面.gif)
+<img src="media/去哪儿网APP详情页面.gif" alt="去哪儿网APP详情页面" style="zoom: 67%;" />
 
 
 
@@ -282,3 +282,18 @@ BFC、清浮动、样式管理
      - header-detail & star组件
      - header-detail交互
 
+
+
+### 1月16日
+
+进行数据中台调研，日常进展暂停，抽空补充了些css、js的知识。
+
+
+
+### 1月17日
+
+1.  Vue响应式原理
+
+<img src="media/Vue数据响应式原理.png" alt="Vue数据响应式原理" style="zoom: 50%;" />
+
+2. 完成饿了么header组件开发
