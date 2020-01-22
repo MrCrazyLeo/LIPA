@@ -292,8 +292,54 @@ BFC、清浮动、样式管理
 
 ### 1月17日
 
-1.  Vue响应式原理
+1. Vue响应式原理
 
 <img src="media/Vue数据响应式原理.png" alt="Vue数据响应式原理" style="zoom: 50%;" />
 
-2. 完成饿了么header组件开发
+2. slot插槽
+   1. Vue.js 2.6.0中引入v-slot代替原本slot和slot-scoped
+   2. 具名插槽
+   3. 动态插槽
+
+
+
+### 1月22日
+
+清除浮动的4种方式
+
+- 额外标签法：在浮动元素末尾添加一个空标签如\<div style='clear:both'\>\<\div>或者其他标签如\<br>等
+
+- 父级添加overflow属性方法：实则触发了BFC实现清浮动，overflow为auto|hidden|scroll都可以
+
+- 使用after伪元素清浮动
+
+  ```css
+   .clearfix:after {  
+       content: ".";
+       display: block;
+       height: 0;
+       clear: both;
+       visibility: hidden;
+  }   
+   .clearfix {*zoom: 1;}   /* IE6、7 专有 */
+  ```
+
+  
+
+- 使用before、after双伪元素清除浮动
+
+  ```css
+  .clearfix:before,.clearfix:after { 
+    content:"";
+    display:table;  /* 触发BFC */
+  }
+  .clearfix:after {
+   clear:both;
+  }
+  .clearfix {
+    *zoom:1;
+  }
+  ```
+
+  
+
