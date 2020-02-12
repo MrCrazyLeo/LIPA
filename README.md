@@ -343,3 +343,113 @@ BFC、清浮动、样式管理
 
   
 
+### 2月5日
+
+（待完善）
+
+#### 创建对象
+
+1. **工厂模式**
+
+   ```js
+   function createHero(name, blood, weapon) {
+       var o = new Object();
+       o.name = name;
+       o.blood = blood;
+       o.weapon = weapon;
+       o.attack = function() {
+           console.log(this.weapon + ' 攻击敌人')
+       }
+       return o;
+   }
+   var LiuBei = createHero('刘备', 100, '剑')
+   var ZhangSan = createHero('张三', 120, '斧头')
+   ```
+
+   解决了创建多个相似对象代码冗余的问题，没有解决对象识别的问题（即怎样知道一个对象的类型）。
+
+   
+
+2. **构造函数模式**
+
+   ```js
+   function Hero(name, blood, weapon) {
+       this.name = name;
+       this.blood = blood;
+       this.weapon = weapon;
+       this.attack = function() {
+           console.log(this.weapon + ' 攻击敌人')
+       }
+   }
+   var LiuBei = new Hero('刘备', 100, '剑')
+   LiuBei.attack()
+   ```
+
+   
+
+3. **原型模式**
+
+   ```js
+   function Student(name, age){
+       this.name = name;
+     this.age = age
+   }
+ Student.prototype = {    
+       constructor: Student,
+     sayHi: function() {
+           console.log("Hi!")
+       },
+       eat: function() {
+           console.log("Eat.")
+       }
+   }
+   var s1 = new Student('zs', 18)
+   ```
+
+   使用 prototype 原型对象解决构造函数的问题，将公用函数“注册”到原型链上去。
+
+   
+
+4. **组合使用构造函数模式和原型模式**
+
+5. **动态原型模式**
+
+6. **寄生构造函数模式**
+
+7. **稳妥构造函数模式**
+
+#### 继承
+
+
+
+### 2月10号
+
+因弄懂黄毅老师的课程需要，研究vue cli脚手架工具初始化的问题。看完[3小时速成Vue2.x核心技术](https://www.imooc.com/video/18571)课程
+
+
+
+### 2月11号
+
+今天主要是弄清楚vue1.x升级到2.x版本的问题，有个知识储备好在接下来跟课程时不至于太懵圈
+
+#### 1.0升级到2.0
+
+**初始化路由变化：**
+
+v-link指令替换为\<router-link\>组件
+
+**Vue 2.0语法变化：**
+
+v-for指令的变化
+
+v-el、v-ref指令的变化 => ref 跟 this.$refs.xxxxx，为了精简API
+
+模板变化，组件只允许一个根元素 => \<template\>下多个元素的话，需要一个div标签包裹
+
+组件通信变化 $dispatch废除
+
+事件监听变化，废除events属性
+
+不能在子组件直接修改父组件传入的prop
+
+过渡的变化
