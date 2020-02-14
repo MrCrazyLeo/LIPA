@@ -394,7 +394,7 @@ BFC、清浮动、样式管理
        this.name = name;
      this.age = age
    }
- Student.prototype = {    
+   Student.prototype = {    
        constructor: Student,
      sayHi: function() {
            console.log("Hi!")
