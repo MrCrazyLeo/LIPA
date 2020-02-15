@@ -257,6 +257,8 @@ BFC、清浮动、样式管理
 
 
 
+
+
 ### 1月15日
 
 1. 修bug、项目联调、测试、发布上线，具体包括：
@@ -453,3 +455,31 @@ v-el、v-ref指令的变化 => ref 跟 this.$refs.xxxxx，为了精简API
 不能在子组件直接修改父组件传入的prop
 
 过渡的变化
+
+
+
+### 2月13-14号
+
+熟悉echarts
+
+
+
+### 2月15号
+
+#### Vue进阶
+
+1. 反复阅读Vue官方文档
+
+   1. v-model其实就是个语法糖，现版本能为不同的输入元素使用不同的属性并抛出不同事件。
+
+      ```js
+      <input v-model="inputValue" />
+      // 其实等价于：
+      <input :value="inputValue" @input="inputValue = $event.target.value"
+      ```
+
+      > - text 和 textarea 元素使用 `value` 属性和 `input` 事件；
+      > - checkbox 和 radio 使用 `checked` 属性和 `change` 事件；
+      > - select 字段将 `value` 作为 prop 并将 `change` 作为事件。
+
+2. 继续跟进慕课课程
