@@ -466,7 +466,7 @@ v-el、v-ref指令的变化 => ref 跟 this.$refs.xxxxx，为了精简API
 
 ### 2月15号
 
-#### Vue进阶
+#### Vue进阶1
 
 1. 反复阅读Vue官方文档
 
@@ -483,3 +483,73 @@ v-el、v-ref指令的变化 => ref 跟 this.$refs.xxxxx，为了精简API
       > - select 字段将 `value` 作为 prop 并将 `change` 作为事件。
 
 2. 继续跟进慕课课程
+
+
+
+### 2月18号
+
+#### Vue进阶2
+
+1. is属性 —— 动态组件
+
+2. 原生 .native
+
+3. 插槽
+   1. 具名插槽 
+   
+      ```vue
+      <!--- 父组件 --->
+      <div class="container">
+          <header>
+              <slot name="header"></slot>
+          </header>
+          <main>
+              <slot></slot>
+          </main>
+          <footer>
+              <slot name="footer"></slot>
+          </footer>
+      </div>
+      
+      <!--- 子组件 --->
+      <base-layout>
+          <template v-slot:header>
+      		<h1>
+                  这是个title
+              </h1>
+          </template>
+          <template>
+      		<p>
+                  这是正文
+              </p>
+          </template>
+          <template v-slot:footer>
+      		<p>
+                  这是footer
+              </p>
+          </template>
+      </base-layout>
+      ```
+   
+      缩写：#
+   
+   2. 作用域插槽
+   
+      ```html
+      <current-user>
+        <template v-slot="scoped">
+          {{ scoped.user.firstName }}
+        </template>
+      </current-user>
+      ```
+   
+      
+   
+4. bus总线 订阅-发布者模式
+
+
+
+### 2月26号
+
+- Mixin
+- max-width
